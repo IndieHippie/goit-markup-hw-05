@@ -68,9 +68,19 @@
       <section class="main-top section">
         <div class="container">
           <h1 class="main-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="main-button">
+          <button type="button" class="main-button" data-modal-open>
             <span class="main-button-name">Заказать услугу</span>
           </button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <div class="close-container">
+              <button class="button-close" data-modal-close>
+                <svg class="icon-close">
+                  <use href="./images/symbol-defscl.svg#icon-close-black"></use>
+                </svg> </button>
+                </div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- Особенности -->
@@ -115,28 +125,43 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="services-list list">
             <li class="services-list-item">
+
               <img
                 src="images/goalimg1.jpg"
                 alt="website development"
                 height="294"
                 width="370"
               />
+              <div class="service-box">
+              <p>Десктопные приложения</p>
+              </div>
+           
             </li>
             <li class="services-list-item">
+              
               <img
                 src="images/goalimg2.jpg"
                 alt="mobile app development"
                 height="294"
                 width="370"
               />
+              <div class="service-box">
+              <p>Мобильные приложения</p>
+            </div>
+            
             </li>
             <li class="services-list-item">
+             
               <img
                 src="images/goalimg3.jpg"
                 alt="desing development"
                 height="294"
                 width="370"
               />
+              <div class="service-box">
+              <p>Дизайнерские решения</p>
+            </div>
+            
             </li>
           </ul>
         </div>
@@ -441,5 +466,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
