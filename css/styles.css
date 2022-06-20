@@ -40,6 +40,11 @@ address {
   font-style: normal;
 }
 
+label {
+  display: flex;
+  flex-direction: column;
+}
+
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -109,6 +114,8 @@ address {
 .header-item:hover,
 .header-item:focus {
   color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .header-item-active {
@@ -125,7 +132,7 @@ address {
   display: block;
   width: 100%;
   height: 4px;
-  
+
   background: var(--accent-color);
   border-radius: 2px;
 }
@@ -162,11 +169,17 @@ address {
 .contact-link-item:hover .link-icon,
 .contact-link-item:focus .link-icon {
   fill: var(--accent-color);
+
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .contact-link-item:hover,
 .contact-link-item:focus {
   color: var(--accent-color);
+
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 /*============ Main ============*/
@@ -252,6 +265,15 @@ address {
   transform: translate(-50%, -50%);
 }
 
+.form {
+  text-align: center;
+  align-items: center;
+  padding: 40px;
+}
+textarea {
+  resize: none;
+}
+
 .close-container {
   position: absolute;
   top: 8px;
@@ -277,6 +299,10 @@ address {
   height: 18px;
   border-radius: 50%;
   background: #ffffff;
+}
+
+.icon-close:hover {
+  fill: var(--accent-color);
 }
 
 /*======== Main-Features ======== */
@@ -499,6 +525,8 @@ address {
 .social-card:hover,
 .social-card:focus {
   background-color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .social-team .item:not(:last-child) {
@@ -508,6 +536,8 @@ address {
 .social-card:hover .card-icon,
 .social-card:focus .card-icon {
   fill: var(--background-color);
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 /*====== Clients ====== */
@@ -533,11 +563,15 @@ address {
 .clients-list .link:hover,
 .clients-list .link:focus {
   border: 1px solid var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .clients-list .link:hover .client-icon,
 .clients-list .link:focus .client-icon {
   fill: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .clients-list .item:not(:last-child) {
@@ -588,6 +622,9 @@ address {
   letter-spacing: 0.03em;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 /*===== Features Portfolio =====*/
@@ -718,6 +755,8 @@ address {
 .address:hover,
 .address:focus {
   color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .contact-mail-footer {
@@ -735,11 +774,15 @@ address {
 .contact-mail-footer:hover,
 .contact-mail-footer:focus {
   color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .contact-tel-footer:hover,
 .contact-tel-footer:focus {
   color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .footer-link {
@@ -789,4 +832,6 @@ address {
 .button-social:hover,
 .button-social:focus {
   background-color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
