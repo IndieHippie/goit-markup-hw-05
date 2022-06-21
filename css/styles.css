@@ -109,13 +109,16 @@ label {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .header-item:hover,
 .header-item:focus {
   color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
+  
 }
 
 .header-item-active {
@@ -159,19 +162,27 @@ label {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .link-icon {
   fill: var(--color-gray);
   margin-right: 10px;
+
+transition-property: fill;
+transition-duration: 250ms;
+transition-timing-function: var(--timing-function);
+  
 }
 
 .contact-link-item:hover .link-icon,
 .contact-link-item:focus .link-icon {
   fill: var(--accent-color);
 
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
+  
 }
 
 .contact-link-item:hover,
@@ -240,12 +251,16 @@ label {
   top: 0;
 
   background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-  visibility: visible;
+  
 }
 
 .modal {
@@ -263,6 +278,8 @@ label {
   border-radius: 4px;
 
   transform: translate(-50%, -50%);
+
+  
 }
 
 .form {
@@ -286,19 +303,26 @@ textarea {
   height: 100%;
   justify-content: center;
   align-items: center;
+
   width: 30px;
   height: 30px;
   border-radius: 50%;
   border: none;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background: #ffffff;
+  background: var(--background-color);
+
+  
 }
 
 .icon-close {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #ffffff;
+  background: var(--background-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .icon-close:hover {
@@ -423,10 +447,7 @@ textarea {
   position: relative;
 }
 
-.service-box {
-}
-
-.service-box > p {
+.services-name {
   position: absolute;
 
   display: flex;
@@ -501,7 +522,6 @@ textarea {
 
 .social-card {
   display: inline-flex;
-  height: 100%;
   justify-content: center;
   align-items: center;
   border: none;
@@ -510,19 +530,25 @@ textarea {
   border-radius: 50%;
   cursor: pointer;
   background-color: var(--background-color);
+
+  transition-property: background, color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .card-icon {
   fill: var(--social-color);
   width: 20px;
   height: 20px;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .social-card:hover,
 .social-card:focus {
   background-color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
 }
 
 .social-team .item:not(:last-child) {
@@ -531,9 +557,7 @@ textarea {
 
 .social-card:hover .card-icon,
 .social-card:focus .card-icon {
-  fill: var(--background-color);
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
+  fill: var(--background-color); 
 }
 
 /*====== Clients ====== */
@@ -547,38 +571,46 @@ textarea {
 
 .clients-list .link {
   display: inline-flex;
-  height: 100%;
   justify-content: center;
   align-items: center;
   width: 170px;
   height: 92px;
   border: 1px solid var(--social-color);
   border-radius: 4px;
-}
-
-.clients-list .link:hover,
-.clients-list .link:focus {
-  border: 1px solid var(--accent-color);
+  
+  transition-property: border, background, color;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
-}
-
-.clients-list .link:hover .client-icon,
-.clients-list .link:focus .client-icon {
-  fill: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
-}
-
-.clients-list .item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .client-icon {
   fill: var(--social-color);
   width: 106px;
   height: 60px;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+  
 }
+
+
+.clients-list .link:hover,
+.clients-list .link:focus {
+  border: 1px solid var(--accent-color);
+  
+}
+
+.clients-list .link:hover .client-icon,
+.clients-list .link:focus .client-icon {
+  fill: var(--accent-color);
+  
+}
+
+.clients-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
 
 /*====== Portfolio ======*/
 
@@ -601,6 +633,10 @@ textarea {
   border-radius: 4px;
 
   padding: 6px 22px;
+
+  transition-property: font-family, box-shadow, background, color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .button-list-item:not(:last-child) {
@@ -612,15 +648,16 @@ textarea {
   font-family: var(--main-font-family);
   color: var(--background-color);
   background-color: var(--accent-color);
+
   font-weight: 500;
   font-size: 16px;
   text-align: center;
   letter-spacing: 0.03em;
+
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
+  
 }
 
 /*===== Features Portfolio =====*/
@@ -659,6 +696,8 @@ textarea {
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translatey(100%);
+  
+  transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
 }
@@ -691,13 +730,22 @@ textarea {
 .portfolio-list .link {
   display: block;
   color: var(--color);
+
+  transition-property: transform, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+}
+
+.portfolio-list .link:hover,
+.portfolio-list .link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-list .link:hover .overlay,
 .portfolio-list .link:focus .overlay {
   transform: translateY(0);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  
 }
 
 .portfolio-container {
@@ -740,39 +788,47 @@ textarea {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--background-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .address:hover,
 .address:focus {
   color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
+
 }
 
 .contact-mail-footer {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--footer-contact-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .contact-tel-footer {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--footer-contact-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .contact-mail-footer:hover,
 .contact-mail-footer:focus {
   color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
+  
 }
 
 .contact-tel-footer:hover,
 .contact-tel-footer:focus {
   color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
+  
 }
 
 .footer-link {
@@ -802,12 +858,16 @@ textarea {
   justify-content: center;
   align-items: center;
   border: none;
+
   width: 44px;
   height: 44px;
   border-radius: 50%;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.1);
   margin-right: 10px;
+
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .button-social .team {
@@ -817,11 +877,12 @@ textarea {
   fill: var(--background-color);
   width: 20px;
   height: 20px;
+
+  
 }
 
 .button-social:hover,
 .button-social:focus {
   background-color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
+ 
 }
