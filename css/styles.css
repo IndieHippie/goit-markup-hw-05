@@ -280,8 +280,156 @@ label {
   align-items: center;
   padding: 40px;
 }
+
+
+.form-field {
+  position: relative;
+}
+
+.form-lable {
+  display: flex;
+  margin: 0;
+  padding-top: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--color-gray);
+}
+
+.form-input {
+  margin-top: 4px;
+  padding: 10px 40px;
+  font: inherit;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  outline: none;
+}
+
+.form-icon {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  fill: var(--color);
+  top: 40px;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+}
+
+.form-input:focus-within {
+  border-color: #2196f3;
+}
+
+.form-field:focus-within > .form-icon {
+  fill: var(--accent-color);
+}
+
 textarea {
   resize: none;
+  outline: none;
+
+  width: 448px;
+  height: 120px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-textarea:focus-within {
+  border-color: #2196f3;
+}
+
+::placeholder {
+  padding-top: 12px;
+  padding-left: 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16px;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+
+
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form-checkbox {
+  display: flex;
+  max-width: 100%;
+  
+  justify-content: center;
+  padding-top: 20px;
+
+  font-family: inherit;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--color-gray);
+}
+
+.lable-checkbox {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.check-icon {
+  display: block;
+  width: 16px;
+  height: 15px;
+
+  border: 2px solid var(--color);
+  border-radius: 2px;
+}
+
+.checkbox-link {
+display: block;
+margin: 0;
+padding: 0;
+ color: var(--accent-color);
+}
+
+.checkbox:checked + .check-icon {
+  border-color: transparent;
+  background-color: var(--accent-color);
+  background-image: url('../images/icon-check.svg');
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.button-submit {
+  cursor: pointer;
+
+  margin-top: 40px;
+  padding: 10px 55px;
+
+  font-size: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  border: none;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  color: var(--background-color);
+
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+}
+
+.button-submit:hover,
+.button-submit:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .close-container {
