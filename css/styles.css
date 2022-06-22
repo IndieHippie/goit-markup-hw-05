@@ -318,6 +318,10 @@ label {
   border-radius: 4px;
 
   outline: none;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .form-icon {
@@ -329,6 +333,10 @@ label {
   left: 12px;
   width: 18px;
   height: 18px;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .form-input:focus-within {
@@ -339,6 +347,16 @@ label {
   fill: var(--accent-color);
 }
 
+.form-input:hover  {
+  cursor: pointer;
+  border-color: var(--accent-color);
+ 
+}
+.form-field:hover .form-icon {
+  
+  fill: var(--accent-color);
+}
+ 
 .form-textarea {
   resize: none;
   outline: none;
@@ -350,9 +368,17 @@ label {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .form-textarea:focus-within {
+  border-color: var(--accent-color);
+}
+
+.form-textarea:hover {
   border-color: var(--accent-color);
 }
 
